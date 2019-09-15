@@ -1,0 +1,296 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Myapp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<%= yield %>
+
+</body>
+</html> -->
+
+   
+
+
+
+
+
+
+                                                                              <!-- Break  -->
+
+
+<html>
+  <head>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Display|Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="prism-atom-dark.css"
+    type="text/css"
+    media="screen"
+  />
+
+  <script type="text/javascript" src="prism.js"></script>
+  <script type="text/javascript" src="prism.ruby.js"></script>
+
+  <title>Niccolo Paparella</title>
+  <meta name="description" content="Niccolo Paparella is an entry-level programming student.  He hopes to find work with a remote-based company helping to develop and build something new.  Niccolo is attempting to pivot out of the restaurant industry after a successful career as a Chef in Los Angeles, CA.  Niccolo is developing an idea for a web application and hopes to bring it to market within a year.">
+
+
+  </head>
+
+  <body>
+    <div class="about-container">
+      <ul>
+        <li><a href="#" class="nav-link">About</a></li>
+        <li><a href="#code-samples" class="nav-link">Code Samples</a></li>
+        <li><a href="#web-apps" class="nav-link">Web Apps</a></li>
+        <li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
+        <li><a href="#contact-me" class="nav-link">HIRE ME</a></li>
+        
+
+
+        <div class="about">
+            <img src="me.jpeg" class="me" />
+            <h1>Niccolo Paparella</h1>
+            <h2>Programmer</h2>
+            <hr class="grey"/>
+            <p class="bio">
+              Niccolo Paparella is an entry-level programming student.  He hopes to find work with a remote-based company helping to develop and build something new.  Niccolo is attempting to pivot out of the restaurant industry after a successful career as a Chef in Los Angeles, CA.  Niccolo is developing an idea for a web application and hopes to bring it to market within a year.
+            </p>
+        </div>
+    </div>  
+    
+    <h3 id="code-samples">Code Snippets</h3>  
+    <hr class="yellow">
+
+    <div class="box">
+      <h4>Temperature Conversion</h4>
+      <p>
+        This Ruby program will promt the user for a temperature in degrees Celsius and let the user know what the corresponding temperature is in Farenheit>
+      </p>
+    </div>
+    <div class="box">
+<pre><code class="language-ruby">puts &quot;Enter degrees in Celcius:&quot;
+val1 = gets.chomp
+val2 = val1.to_f
+val3 = (val2 * 9/5) + 32
+
+puts &quot;The temperature is #{val3} degrees Fahrenheit&quot;</code></pre>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Ordinal Challenge</h4>
+      <p>
+        This Ruby program will convert a plain number to the ordinal of the number.  So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+      </p>
+    </div>
+    <div class="box">
+<pre><code class="language-ruby">greeting = &quot;Enter a number&quot;
+puts greeting
+number = gets.chomp
+
+if number.to_i % 10 == 1
+    puts &quot;That's the #{number + &quot;st&quot;} item!&quot; unless number == &quot;11&quot; || number == &quot;12&quot; || number == &quot;13&quot;
+elsif number.to_i % 10 == 2
+    puts &quot;That's the #{number + &quot;nd&quot;} item!&quot; unless number == &quot;11&quot; || number == &quot;12&quot; || number == &quot;13&quot;
+elsif number.to_i % 10 == 3
+    puts  &quot;That's the #{number + &quot;rd&quot;} item!&quot; unless number == &quot;11&quot; || number == &quot;12&quot; || number == &quot;13&quot;
+else
+    puts &quot;That's the #{number + &quot;th&quot;} item!&quot; 
+end
+
+
+if number == &quot;11&quot; || number == &quot;12&quot; || number == &quot;13&quot;
+    puts &quot;That's the #{number + &quot;th&quot;} item!&quot;
+end</code></pre>
+    </div>
+
+    <br class="clear" />
+    <div class="box">
+      <h4>Foobar</h4>
+        <p>
+          This Ruby program is an adaptation of a classic technical
+          interview problem which displays sequences
+          of the Foobar pattern.
+        </p>
+    </div>
+    <div class="box">
+<pre><code class="language-ruby">puts &quot;How many digits would you like to see within the FooBar Challenge?&quot;
+digits = gets.chomp.to_i
+
+def foobar n
+   n.times do |i|
+      i += 1
+      num = &quot;&quot;
+      num &lt;&lt; &quot;Foo&quot; if i % 3 == 0
+      num &lt;&lt; &quot;Bar&quot; if i % 5 == 0
+      num = i.to_s if num == &quot;&quot;
+      puts num
+   end
+end
+
+puts foobar digits</code></pre>
+    </div>
+
+    <br class="clear" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3 id="web-apps">Web Apps</h3>
+    <hr class="yellow" />
+
+    <div class="box border-box">
+      <h4 class>Quote Generator</h4>
+        <img src="splurty.png" class="full-width" />
+          <p>
+              A database-powered quote generator with a mobile-first
+              design, using the Ruby on Rails framework, HTML, and CSS.
+              Uses Git and GitHub for version control, and launched
+              on Heroku.
+          </p>
+    </div>
+    <div class="box border-box">
+      <hr>
+      <h4>Yelp Clone</h4>
+        <img src="nomster.png" class="full-width" />
+          <p>
+              A Yelp clone that integrates with the Google Maps API
+              and includes features like user comments, star ratings,
+              image uploading, and user authentication.
+          </p>
+      <hr>
+      </p><h4>Two-Sided Market Place</h4>
+        <img src="flixter.png" class="full-width" />
+          <p>
+              A two-sided, video-streaming marketplace platform that
+              features credit card payment capabilities, user role
+              management, complex user interfaces, and advanced
+              database relationships.
+          </p>
+      <hr>
+      </p><h4>Test Driven Development</h4>
+        <img src="grammable.png" class="full-width" />
+          <p>
+              An Instagram clone that was built using industry-standard, test-driven
+              development following numerous red/green/refactor cycles.
+          </p>
+      <hr>    
+      </p><h4>Single Page Todo Application</h4>
+        <img src="todoster.png" class="full-width" />
+          <p>
+              This single-page to-do application features a
+              fluid user interface that– by using JavaScript–
+              allows users to rapidly add dynamic content.
+          </p>
+      <hr>    
+      </p><h4>Agile Team Project</h4>
+        <img src="chess.png" class="full-width" />
+          <p>
+              Worked on an Agile software development team building
+              a chess application. Under the guidance of a senior software engineer,
+              we had weekly Agile team meetings for code reviews, sprint planning,
+              and feature assignments.
+          </p>
+       <hr>  
+
+    <hr>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="yellow" />
+     <p class="skills-and-tools">
+      Ken has developed proficiency and expertise
+      in the following programming languages and
+      comfort with the following tools.
+    </p>
+
+
+    <div class="icons">
+
+        <img src="github.png" class="icon" />
+        <img src="rubocop.png" class="icon" />
+        <img src="trello.png" class="icon" />
+        <img src="slack.png" class="icon" />
+        <img src="codeship.png" class="icon" />
+
+
+
+        <br class="clear" />
+        <img src="skills.png" class="icon" />
+
+     </div>
+
+
+
+
+
+
+
+
+     <div class="contact-me">
+        <h3 id="contact-me" class="contact-headline">Contact</h3>
+        <hr class="yellow" />
+        <p class="contact-info">
+        Currently entertaining new opportunities.
+        Please get in touch via email:
+      </p>
+
+<p>
+        <a href="mailto:my@email.com" class="contact-link">
+          my@email.com
+        </a>
+      </p>
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+</html>
